@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.7.1.js"></script>
+
+</head>
+<body>
+<!-- --------------------------SMOOTHSCROLL--------------------------------------------- -->
+
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+                                // Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+                                //SCROLL CHECK FOR NAVBAR BG
+$(window).scroll(function(){
+    if ($(this).scrollTop()>400){
+        console.log("bruh");
+        $("#navBarBg").fadeIn();
+    }
+    else {
+        $("#navBarBg").fadeOut();
+    }
+});
+
+// -----------------SCROLL BUTTON-----------------------------------------------------
+function scrollDownFunction(){
+console.log("scrollDownFunction");
+window.scrollTo({
+    top:$(window).height(),
+    behavior:'smooth'
+});
+}
+</script>
+
+<!-- ----------------------------------NAVBAR HTML--------------------------------------- -->
+
+    <div id="navBarBg"></div>
+    <div id="navBar">
+        <a class="leftNav" href="index.html">Work</a>
+        <a class="leftNav" href="bioPage.html">Bio</a>
+        <a class="leftNav" href="bigTransition.html">Other</a>
+        <a class="rightNav" href="index.html">Home</a>
+    </div>
+    <div id="navBarBg"></div>
+<!-- ----------------------------------SPLASH SCREEN--------------------------------------- -->
+<div class="bigDesignSplash"></div>
+<img onclick="scrollDownFunction()"class="downArrow" src="Images/whiteDownArrow.png">
+<style>
+.bigDesignSplash {
+background-image: url("Images/USFWS_Thumbnail.png");
+}
+</style>
+<!-- --------------------------TEXT--------------------------------------------- -->
+
+<div class="bigProject">
+    <div class="bigProjText">
+        <div class="bigProjHeader">
+            <b>US Fish and Wildlife Service Signage</b>
+        </div>
+        <div class="bigProjBody">
+            <p>In collaboration with the U.S. Fish and Wildlife Service, our team undertook the challenge to design educational signage for national parks and wildlife refuges. Our primary goal was to create visually engaging and informative signs that would capture the attention of visitors while providing valuable information about the local wildlife. By combining hand-drawn illustrations with concise, user-focused text, we aimed to inspire curiosity and foster a deeper appreciation for wildlife.</p>
+        </div>
+        <div class="bigProjDetails">
+            <div class="detailCaption">
+                <b>Timeline</b>
+                <p>10 weeks</p> 
+            </div>
+        
+            <div class="detailCaption">
+                <b>Skills</b>
+                <p>Illustration</p>
+                <p>Typography</p>
+                <p>Branding</p>
+                <p>User Persona</p>
+                <p>Graphic Design</p>
+            </div>
+
+            <div class="detailCaption">
+                <b>Role</b>
+                <p>Graphic Designer</p>
+            </div>
+
+            <div class="detailCaption">
+                <b>Collaborators</b>
+                <p>Michelle Mott</p>
+                <p>Amy Hong</p>
+                <p>Mel Pagan</p>
+            </div>
+        </div>
+    </div>
+    <div class="bigProjImage">
+        <img src="Images/USFWS/sign1.png" alt="sample 1" id="smallProjImage">
+    </div>
+
+        <div style="
+/*    outline: 2px dotted green;*/
+    margin:auto;
+    display:flex;
+    width:60vw;
+    margin-top: 15vh;
+    justify-content: space-between;
+    align-items: center;
+/*    padding-bottom: 15vh;*/
+    ">
+        <div style="
+        width:fit-content;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: ;
+        "class="bigProjFlexContainer">
+            <div style="margin-bottom: 2vh;"class="bigProjFlexCaption">
+                <p>Design Process</p>
+            </div>
+
+             <div style="width:20vw;margin-bottom: 5vh;"class="bigProjFlexText">
+                <p>Our Illustrations (Done by collaborators and myself) were designed to be both scientifically informative and artistically appealing. Blending seamlessly with the natural park environment was a priority of ours. Adjustments were made based on feedback from U.S. Fish and Wildlife representatives which helped us to ensure the final signs were suited for diverse audiences.</p>
+            </div>
+
+            <div class="bigProjFlexCaption">
+            <p>Our Goals</p>
+            </div>
+             <div style="width:20vw;margin-bottom: 5vh;margin-left: 2vw;"class="bigProjFlexText">
+                <p>Engage Visitors by designing signs that stand out in a natural setting and hold the reader’s attention.</p>
+            </div>
+            <div style="width:20vw;margin-bottom: 5vh;margin-left: 2vw;"class="bigProjFlexText">
+                <p>Educate Effectively by delivering key facts about wildlife in a way that is clear, concise, and accessible to a broad audience.</p>
+            </div>
+            <div style="width:20vw;margin-bottom: 5vh;margin-left: 2vw;"class="bigProjFlexText">
+                <p>Blend Art with Functionality and balance artistic illustrations with legible and informative content.</p>
+            </div>
+        </div>
+        <div class="bigProjImageContainer" style="width:30vw;">
+            <img src="Images/USFWS/CoastalAster.png">
+        </div>
+    </div>
+
+
+
+
+    <div style="
+/*    outline: 2px dotted green;*/
+    margin:auto;
+    display:flex;
+    width:60vw;
+    margin-top: 15vh;
+    justify-content: space-between;
+    align-items: center;
+/*    padding-bottom: 15vh;*/
+    ">
+        <div class="bigProjFlexContainer" 
+        style="
+        width:fit-content;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: ;
+        ">
+            <div style="margin-bottom: 2vh;"class="bigProjFlexCaption">
+                <p>Designing for Accessibility</p>
+            </div>
+
+             <div style="width:30vw;margin-bottom: 5vh;"class="bigProjFlexText">
+                <p>Designing for accessibility was a priority throughout the project. Recognizing that a significant portion of the population experiences color blindness, we carefully selected color combinations that maintained high contrast and visibility for all users. By using patterns and textures in addition to color, we ensured that key elements of the signage remained distinguishable regardless of visual impairments.</p>
+            </div>
+        </div>
+    </div>
+     <div class="smallProjImage">
+        <img style="max-height: 30vh;" src="Images/USFWS/Butterfly1.png" alt="sample 1" id="smallProjImage">
+        <img style="max-height: 30vh;"src="Images/USFWS/Butterfly2.png" alt="sample 1" id="smallProjImage">
+        <img style="max-height: 30vh;"src="Images/USFWS/Butterfly3.png" alt="sample 1" id="smallProjImage">
+        <img style="max-height: 30vh;" src="Images/USFWS/Butterfly4.png" alt="sample 1" id="smallProjImage">
+        </div>
+
+        <div style="
+/*        outline: 2px dotted green;*/
+        margin:auto;
+        display:flex;
+        width:70vw;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 15vh;
+        margin-top:15vh;">
+            <div>
+                <img style="
+                    max-height: 50vh;
+                    margin-bottom: 2vh;
+                    "src="Images/USFWS/Isaac_Persona.jpg" alt="Isaac_Persona">
+            </div>
+            <div style="
+            width:fit-content;
+            flex-direction: column;
+            justify-content: space-between;
+            "class="bigProjFlexContainer">
+                <div style="margin-bottom: 2vh;"class="bigProjFlexCaption">
+                <p>User Research</p>
+                </div>
+                <div style="width:25vw;margin-bottom: 5vh;"class="bigProjFlexText">
+                <p>A crucial part of our design process involved understanding the preferences and behaviors of park visitors. Based on polling and observational data, we developed detailed personas representing typical park visitors, such as families, hikers, and wildlife enthusiasts. These personas highlighted key motivations (e.g., educating children, spotting rare animals) and potential pain points (e.g., signs being too dense or unappealing).<p>
+            </div>
+            </div>
+        </div>
+
+        <div class="smallProjImage">
+        <img style="max-width: 70vw;object-fit: contain;margin-left: 10vw;" src="Images/USFWS/Darner.png" alt="sample 1" id="smallProjImage">
+        <img style="min-height: 80vh;object-fit: contain;margin-left: 5vw;"src="Images/USFWS/Horseshoe.png" alt="sample 1" id="smallProjImage">
+        <img style="max-height: 80vh;"src="Images/USFWS/Heron.png" alt="sample 1" id="smallProjImage">
+        <img style="min-width: 40vw;object-fit: contain;margin-left: 20vw;" src="Images/USFWS/Milkweed.png" alt="sample 1" id="smallProjImage">
+        </div>
+
+
+    <div style="
+/*    outline: 2px dotted green;*/
+    margin:auto;
+    display:flex;
+    width:60vw;
+    margin-top: 15vh;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10vh;
+    ">
+        <div style="
+        width:fit-content;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: ;
+        "class="bigProjFlexContainer">
+            <div style="margin-bottom: 2vh;"class="bigProjFlexCaption">
+                <p>Feedback and Iterations</p>
+            </div>
+
+             <div style="width:20vw;margin-bottom: 5vh;"class="bigProjFlexText">
+                <p>Throughout the project, we held regular meetings with representatives from the U.S. Fish and Wildlife Service to ensure alignment with their vision and goals. This collaborative approach allowed us to refine our designs iteratively, ensuring the final products met both agency standards and visitor needs. These sessions included:</p>
+            </div>
+             <div style="width:20vw;margin-bottom: 5vh;margin-left: 2vw;"class="bigProjFlexText">
+                <p>Reviewing initial concepts and prototypes.</p>
+            </div>
+            <div style="width:20vw;margin-bottom: 5vh;margin-left: 2vw;"class="bigProjFlexText">
+                <p>Receiving constructive feedback on layout, tone, and visual style.</p>
+            </div>
+            <div style="width:20vw;margin-bottom: 5vh;margin-left: 2vw;"class="bigProjFlexText">
+                <p>Learning about specific messaging priorities, such as promoting conservation efforts.</p>
+            </div>
+        </div>
+        <div class="bigProjImageContainer" style="width:30vw;">
+            <img src="Images/USFWS/GroupPhoto.jpeg">
+        </div>
+    </div>
+    <div style="margin-bottom: 2vh;margin-left: 19vw;"class="bigProjFlexCaption">
+                <p>Conclusion</p>
+            </div>
+
+             <div style="width:20vw;margin-bottom: 5vh;margin-left: 19vw;"class="bigProjFlexText">
+                <p>This project exemplifies the power of combining design skills with user research and cross-organization collaboration. It was an opportunity to bring artistry and purpose together, creating something that will leave a lasting impression on park visitors while promoting awareness and respect for wildlife.</p>
+            </div>
+</div>
+<!-- ------FOOTER --------------------------------------------------------->
+<div class="fullFooter" style="margin-top: 20vh;">
+    <p class="workTogether">- Let's Work Together -</p>
+    <div class="footer">
+        <div class="footerSiteBlock">
+            <p class="footerGrey">Site</p>
+            <a href="index.html" class="footerWhite">Home</a>
+            <a href="aboutPage.html" class="footerWhite">About</a>
+            <a href="otherPage.html" class="footerWhite">Other Projects</a>
+        </div>
+
+        <div class="footerContactBlock">
+            <p class="footerGrey">Contact</p>
+            <a href="Images/TylerMillien_Resume.pdf" target="_blank" rel="noopener noreferrer" class="footerWhite">Resume</a>
+            <a href="https://www.linkedin.com/in/tylermillien/" target="_blank" rel="noopener noreferrer" class="footerWhite">LinkedIn</a>
+            <a class="footerWhite">tmillien188@gmail.com</a>
+            <a class="footerWhite">+1 (978) 604-3109</a>
+        </div>
+    </div>
+    <p class="copyRight">© 2025 Tyler Millien</p>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+
+</body>
+</html>

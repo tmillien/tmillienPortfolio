@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.7.1.js"></script>
+
+</head>
+<body>
+<!-- --------------------------SMOOTHSCROLL--------------------------------------------- -->
+
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+// Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+                                //SCROLL CHECK FOR NAVBAR BG
+$(window).scroll(function(){
+    if ($(this).scrollTop()>400){
+        console.log("bruh");
+        $("#navBarBg").fadeIn();
+    }
+    else {
+        $("#navBarBg").fadeOut();
+    }
+});
+
+// -----------------SCROLL BUTTON-------------------------------------------------
+function scrollDownFunction(){
+console.log("scrollDownFunction");
+window.scrollTo({
+    top:$(window).height(),
+    behavior:'smooth'
+});
+}
+</script>
+    <div id="navBarBg"></div>
+    <div id="navBar">
+        <a class="leftNav" href="smallDesignPage.html">Work</a>
+        <a class="leftNav" href="aboutPage.html">About</a>
+        <a class="leftNav" href="otherPage.html">Other</a>
+        <a class="rightNav" href="index.html">Home</a>
+</div>
+<!-- ----------------------------------SPLASH SCREEN---------------------------- -->
+<div class="bigDesignSplash"></div>
+<img onclick="scrollDownFunction()"class="downArrow" src="Images/whiteDownArrow.png">
+<style>
+
+.bigDesignSplash {
+background-image: url("Images/ListBuddy_Thumbnail.png");
+}
+</style>
+<!-- --------------------------CAPTION TEXT-------------------------------------------- -->
+
+<div class="bigProject">
+    <div class="bigProjText">
+        <div class="bigProjHeader">
+            <a href="https://devpost.com/software/listbuddy" style="text-decoration: none;color:white;"target="_blank" rel="noopener noreferrer">ListBuddy</a>
+        </div>
+        <div class="bigProjBody">
+            <p>ListBuddy was created during a collaborative hackathon to address a significant challenge faced by individuals with executive dysfunction: managing and completing everyday tasks effectively. Many people feel overwhelmed by daily responsibilities or struggle to stay organized, leading to frustration and decreased productivity. Our team identified these pain points and set out to design a solution that would empower users to regain control of their to-do lists and celebrate progress along the way.</p>
+        </div>
+        <div class="bigProjDetails">
+            <div class="detailCaption">
+                <b>Timeline</b>
+                <p>2 weeks</p> 
+            </div>
+            <div class="detailCaption">
+                <b>Skills</b>
+                <p>UI/UX Design</p>
+                <p>Prototyping</p>
+                <p>User-centric Design</p>
+                <p>AI Integration</p>
+                <p>Research</p>
+            </div>
+            <div class="detailCaption">
+                <b>Role</b>
+                <p>UI Designer</p>
+                <p>Logo Designer</p>
+            </div>
+            <div class="detailCaption">
+                <b>Collaborators</b>
+                <p>Juan Sanchez Roa</p>
+                <p>Sandy Son</p>
+                <p>Ryan Nguyen</p>
+                <p>Josie Lee</p>
+            </div>
+        </div>
+    </div>
+    
+
+<!-- ------------------------------MAIN TEXT----------------------------------------- -->
+    <div class="bigProjImage">
+            <img style="max-height: 100vh;"src="Images/ListBuddy/Login page.png" alt="sample 1">
+        </div>
+
+    <div style="margin-left:14.5vw;"class=bigProjFlexCaption>
+        <p>Problem Identification:</p>
+    </div>
+
+    <div style="
+    width:70vw;
+    left:0;
+    right:0;
+    justify-content: space-between;
+    flex-direction:row;
+    padding-bottom:15vh;
+    margin:auto;
+        "class="bigProjFlexContainer">
+        <div class="bigProjFlexText">
+            <b>Task overload</b>
+            <p>Many users felt overwhelmed by the sheer volume of tasks, leading to paralysis and inaction.</p>
+        </div>
+        <div class="bigProjFlexText">
+            <b>Lack of Motivation</b>
+            <p>Traditional task management tools were often too complex or not tailored to individuals with specific organizational challenges.</p>
+        </div>
+        <div class="bigProjFlexText">
+            <b>Other tools are too complex</b>
+            <p>Without visible progress or rewards, maintaining momentum in task completion was a struggle.</p>
+        </div>
+
+    </div>
+
+    <div style="
+/*    outline: 2px dotted green;*/
+    margin:auto;
+    display:flex;
+    width:70vw;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15vh;
+    ">
+        <div style="
+        width:fit-content;
+        flex-direction: column;
+        justify-content: space-between;
+        "class="bigProjFlexContainer">
+        <div class="bigProjFlexCaption">
+            <p>Exploration</p>
+        </div>
+             <div style="width:20vw;margin-bottom: 5vh;"class="bigProjFlexText">
+                <p>Users can manually add tasks or let ListBuddy’s AI generate a tailored task list based on their input and preferences. This personalization ensures that the app adapts to the user’s specific needs.</p>
+            </div>
+            <div style="width:20vw;margin-bottom: 5vh;"class="bigProjFlexText">
+                <p>Tasks are automatically categorized into “Active Tasks” and “Completed Tasks,” providing users with a clear overview of what needs to be done and what they’ve accomplished.</p>
+            </div>
+            <div style="width:20vw;margin-bottom: 5vh;"class="bigProjFlexText">
+                <p>To keep users engaged, ListBuddy rewards a star for every task completed on time. This gamification element encourages consistency and celebrates progress, no matter how small.</p>
+            </div>
+        </div>
+        <img style="
+            max-height: 60vh;
+            "src="Images/ListBuddy/IMG-2261.jpg" alt="sample 1">
+    </div>
+
+    <div style="
+/*    outline: 2px dotted green;*/
+    margin:auto;
+    display:flex;
+    width:65vw;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15vh;
+    ">
+        <div>
+            <img style="
+                max-height: 40vh;
+                margin-bottom: 2vh;
+                "src="Images/ListBuddy/Main.png" alt="sample 1">
+            <img style="
+                max-height: 40vh;
+                "src="Images/ListBuddy/Detail Botinfo v2.png" alt="sample 1">
+        </div>
+
+        <div style="
+        width:fit-content;
+        flex-direction: column;
+        justify-content: space-between;
+        "class="bigProjFlexContainer">
+        <div class="bigProjFlexCaption">
+            <p>Prototype</p>
+        </div>
+            <div style="width:20vw;margin-bottom: 5vh;"class="bigProjFlexText">
+                <p>As the lead designer, I focused on creating a user-centric interface that is both visually appealing and highly functional. Key elements include:</p>
+            </div>
+           <div style="width:20vw;margin-bottom: 5vh;"class="bigProjFlexText">
+                <b>Accessibility</b>
+                <p>Simple navigation and a clutter-free layout ensure the app is easy to use, even for individuals who struggle with complex systems.</p>
+            </div>
+            <div style="width:20vw;margin-bottom: 5vh;"class="bigProjFlexText">
+                <b>Visual Feedback</b>
+                <p>Clear progress indicators, such as the “Completed Tasks” section and star rewards, provide a sense of accomplishment.</p>
+            </div>
+            <div style="width:20vw;margin-bottom: 5vh;"class="bigProjFlexText">
+                <b>Friendly Aesthetic</b>
+                <p>The design incorporates warm, inviting visuals that make ListBuddy feel like a supportive companion rather than a strict taskmaster.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bigProjImage">
+            <img style="max-height: 200vh;"src="Images/ListBuddy/Capture.png" alt="sample 1">
+    </div>
+
+    <div style="
+/*    outline: 2px dotted green;*/
+    margin:auto;
+    display:flex;
+    width:70vw;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15vh;
+    ">
+        <div style="
+        width:fit-content;
+        flex-direction: column;
+        justify-content: space-between;
+        "class="bigProjFlexContainer">
+        <div class="bigProjFlexCaption">
+            <p>Conclusion</p>
+        </div>
+            <div style="width:80%;margin-bottom: 5vh;"class="bigProjFlexText">
+                <p>ListBuddy empowers users to tackle their daily responsibilities with confidence and clarity. By simplifying task management and incorporating motivational elements, the app transforms an overwhelming chore into a rewarding experience. Whether users need help organizing household chores, work responsibilities, or personal goals, ListBuddy’s AI-driven approach ensures they always have a helping hand.<br><br>ListBuddy demonstrates how thoughtful design and innovative AI technology can solve real-world problems. By addressing the unique challenges faced by individuals with executive dysfunction, we created a tool that not only improves productivity but also enhances users’ overall well-being. </p>
+            </div>
+        </div>
+        <img style="
+            max-height: 50vh;
+            "src="Images/ListBuddy/IMG-2295.jpg" alt="sample 1">
+    </div>
+</div>
+<
+<!-- ------FOOTER --------------------------------------------------------->
+<div class="fullFooter">
+    <p class="workTogether">- Let's Work Together -</p>
+    <div class="footer">
+        <div class="footerSiteBlock">
+            <p class="footerGrey">Site</p>
+            <a href="index.html" class="footerWhite">Home</a>
+            <a href="aboutPage.html" class="footerWhite">About</a>
+            <a href="otherPage.html" class="footerWhite">Other Projects</a>
+        </div>
+
+        <div class="footerContactBlock">
+            <p class="footerGrey">Contact</p>
+            <a href="Images/TylerMillien_Resume.pdf" target="_blank" rel="noopener noreferrer" class="footerWhite">Resume</a>
+            <a href="https://www.linkedin.com/in/tylermillien/" target="_blank" rel="noopener noreferrer" class="footerWhite">LinkedIn</a>
+            <a class="footerWhite">tmillien188@gmail.com</a>
+            <a class="footerWhite">+1 (978) 604-3109</a>
+        </div>
+    </div>
+    <p class="copyRight">© 2025 Tyler Millien</p>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+
+</body>
+</html>
