@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
     <meta charset="utf-8" />
     <title></title>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="jquery-3.7.1.js"></script>
 </head>
 <body style="overflow:hidden">
 <!-- --------------------------SMOOTHSCROLL--------------------------------------------- -->
@@ -35,6 +35,14 @@ $(window).scroll(function(){
 
 //FADE IN ON PAGE LOAD
 $(document).ready(function(){
+    $(".homepageWorkBlock").fadeIn({queue: false, duration:600});
+    $(".downArrow").fadeIn({queue: false, duration:600});
+    $(".downArrow").animate({
+        top: "69%" 
+        },{
+        duration: 900,
+        easing: "swing",
+    });
     $("#personalCaption").fadeIn({queue: false, duration:600});
     $("#personalCaption").animate({
         top: "49%" 
@@ -47,7 +55,7 @@ $(document).ready(function(){
 
 //WORK BLOCK FADE IN
 $(document).ready(function(){
-    $(".homepageWorkBlock").fadeIn({queue: false, duration:600});
+    
     // $(".homepageWorkBlock").animate({
     //     top: "49%" 
     //     },{
@@ -71,16 +79,16 @@ window.scrollTo({
     <img style="overflow: auto;position:absolute; top:75%; left:-15%; transform: rotate(90deg);width: 180vw;"src="Images/Portrait_White.gif" alt="sample 1">
 <div id="navBarBg"></div>
 <div id="navBar">
-        <a class="leftNav" href="smallDesignPage.html">Work</a>
+        <a onclick="scrollDownFunction()" class="leftNav">Work</a>
         <a class="leftNav" href="aboutPage.html">About</a>
-        <a class="leftNav" href="otherPage.html">Other</a>
+        <a class="leftNav" href="Images/TylerMillien_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
         <a class="rightNav" href="index.html">Home</a>
 </div>
 <!-- <div id="navBarLine"></div> -->
 
 <!-- Caption======================================================================= -->
 
-<img onclick="scrollDownFunction()"class="downArrow" style="position:absolute; margin-left: 15vw;" src="Images/whiteDownArrow.png">
+<img onclick="scrollDownFunction()"class="downArrow" style="display:none;position:absolute; margin-left: 15vw;" src="Images/whiteDownArrow.png">
 
 
 
@@ -193,7 +201,7 @@ window.scrollTo({
             <p class="footerGrey">Site</p>
             <a href="index.html" class="footerWhite">Home</a>
             <a href="aboutPage.html" class="footerWhite">About</a>
-            <a href="otherPage.html" class="footerWhite">Other Projects</a>
+            <!-- <a href="otherPage.html" class="footerWhite">Other Projects</a> -->
         </div>
 
         <div class="footerContactBlock">
