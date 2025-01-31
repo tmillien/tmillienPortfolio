@@ -1,0 +1,455 @@
+
+@font-face{
+	font-family:'inter';
+	src: url(Inter-VariableFont_opsz,wght.ttf)
+}
+
+
+
+
+body {
+	background-color: #0E0E0E;
+	margin:0;
+	padding:0;
+}
+p{
+	margin:0;
+}
+/*NAVBAR--------------------------------------------------------------------*/
+#navBar{
+	font-family: inter;
+	position:fixed;
+	width: 95vw;
+	padding-left:50px;
+	padding-right: 50px;
+	padding-top:1vh;
+	z-index: 9;
+	font-size: 1.5em;
+}	
+
+#navBar a{
+	position:relative;
+	color:white;
+	text-align: center;
+	padding: 14px 25px;
+	margin-right: 15px;
+	text-decoration: none;
+/*	font-size:4%vh;*/
+}
+#navBar a:hover{
+	background-color:white;
+	color:black;
+	font-weight:bold;
+	border-radius: 10px;
+}
+#navBarBg{
+	position:relative;
+	width: 100vw;
+	height: 70px;
+	position:fixed;
+	padding-left:50px;
+	padding-right: 50px;
+	padding-top:1vh;
+	z-index: 5;
+	background-color: black;
+	opacity:.4;
+	display: none;
+}
+#navBarLine{
+	background-color: white;
+	position: absolute;
+	top:70px;
+	height: 1px;
+	width: 100vw;
+}
+.leftNav{
+	float:left;
+}
+.rightNav{
+	float:right;
+}
+
+/*HOMEPAGE----------------------------------------------*/
+#pageContent{
+	background-color: #0E0E0E;
+	width:100vw;
+	height:100vh;
+	font-family: inter;
+	color:white;
+
+
+}
+#personalCaption{
+/*	background-color: pink;*/
+	display: none;
+	z-index: 0;
+	position:absolute;
+	font-size: 40px;
+/*	max-width:45%;*/
+	left:7%;
+	top:55%;
+}
+#personalCaption b{
+	color:green;
+	font-size:56px;
+}
+#splashImage{
+	position:absolute;
+	float:right;
+	right:0px;
+	top:-50px;
+	object-fit: cover;
+	max-width:100vw;
+	max-height:100vh;
+}
+.navBlock{
+/*	background-color: lightblue;*/
+	width: 100vw;
+	height:30vh;
+}
+#WorkBlock{
+/*	background-color: #0E0E0E;*/
+	height:140%;
+	width: 110%;
+	top:160%;
+	position:relative;
+/*	filter:blur(20px);*/
+}
+.homepageWorkBlock{
+/*	background-color: lightgrey;*/
+	display: none;
+	z-index: 0;
+	position:relative;
+	margin-right: 8%;
+	margin-left: 8%;
+	margin-bottom: 3%;
+	width:84%;
+	height:60%;
+}
+.homepageWorkBlockImage{
+/*	background-color: green;*/
+	float:right;
+	width:65%;
+	height:100%;
+	object-fit: cover;
+	transition: transform .5s;
+}
+.homepageWorkBlockImage:hover{
+	transform: scale(1.03);
+}
+
+.homepageWorkBlockText{
+/*	background-color: seagreen;*/
+	float:left;
+	width:25%;
+	height:30%;
+}
+.homepageWorkBlockTextTitle{
+	font-size: 3em;
+	font-weight: 600;
+	width:30vw;
+}
+.homepageWorkBlockTextDate{
+	font-size:1.5em;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+.homepageWorkBlockTextBody{
+	font-size:1.5em;
+	font-weight: 400;
+	color:grey;
+}
+/*ABOUT PAGE-------------------------------------------------*/
+
+.bioText{
+	font-weight: 400;
+	width:15vw;
+	color:#CDCDCD;
+	font-size: 1em;
+	width:26vw;
+	margin-bottom: 2vh;
+}
+
+
+/*small DESIGN PAGE---------------------------------------------*/
+.smallProject{
+		font-family: inter;
+		padding-bottom: 20vh;
+/*		display:none;*/
+}
+.smallProjText{
+/*	background-color:rosybrown;*/
+	font-size: 16px;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	color:white;
+	padding-bottom: 8vh;
+	height:flex;
+	display:flex;
+	justify-content: flex-start;
+}
+.smallProjHeader{
+/*background-color: red;*/
+font-size: 18px;
+font-weight: normal;
+display: inline-block;
+vertical-align: top;
+height:5vh;
+padding-top: 0;
+padding-right: 4vw;
+}
+.smallProjBody{
+/*background-color: darkred;*/
+vertical-align: top;
+color:#CDCDCD;
+display: inline-block;
+width:30vw;
+min-height: 10vh;
+padding-right: 5vw;
+/*padding-left: 5vw; how abt padding on right only?*/
+}
+.smallProjDetails{
+/*background-color: black;*/
+/*float: right;*/
+vertical-align: top;
+display: inline-block;
+}
+.detailCaption{
+	padding-right: 1vw;
+	vertical-align: top;
+	display: inline-block;
+	color: white;
+	position:relative;
+}
+.detailCaption b{
+/*	background-color: rebeccapurple;*/
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+.smallProjImage{
+/*	background-color: darkblue;*/
+	text-align: center;
+	flex-wrap: wrap;
+/*	justify-content: center;*/
+	align-content: center;
+	align-items: start;
+
+
+	margin-left: 10vw;
+	margin-right: 10vw;
+	display:flex
+/*	position:relative;*/
+
+}
+.smallProjImage img{
+	padding:5px 5px;
+	max-height: 80vh;
+	border-radius: 4%;
+	display: inline-block;
+	vertical-align: middle;
+/*	border: 1px solid #ccc;*/
+}
+
+/*BIGDESIGN PAGE---------------------------------------------*/
+
+
+.bigDesignSplash {
+  	min-height: 100vh; 
+  	background-attachment: fixed;
+ 	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	z-index: 0;
+}
+.downArrow{
+	height:auto;
+	width: auto;
+	display:block;
+/*	background-color: blue;*/
+	object-fit: contain;
+	position:relative;
+	margin:auto;
+	bottom:20vh;
+	z-index: 9;
+}
+
+.bigProject{
+		font-family: inter;
+		padding-top:15vh;
+/*		display:none;*/
+}
+.bigProjText{
+/*	background-color:rosybrown;*/
+	font-size: 1.1em;
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	padding-bottom: 15vh;
+	height:flex;
+	color:white;
+
+}
+.bigProjHeader{
+/*	background-color: red;*/
+/*	font-size: 18px;*/
+	display: flex;
+	vertical-align: top;
+	width:10vw;
+	height:5vh;
+	padding-top: 0;
+}
+.bigProjBody{
+/*	background-color: darkred;*/
+/*	font-size: 16px;*/
+	vertical-align: top;
+	line-height: 1.4;
+/*	display: flex;*/
+	width:30vw;
+	min-height: 10vh;
+	padding-right: 5vw;
+/*padding-left: 5vw; how abt padding on right only?*/
+}
+.bigProjDetails{
+/*background-color: black;*/
+/*float: right;*/
+	vertical-align: top;
+	display: inline-block;
+}
+.detailCaption{
+/*	font-size: 16px;*/
+	padding-right: 2vw;
+	vertical-align: top;
+	display: inline-block;
+	color: white;
+	position:relative;
+}
+.detailCaption b{
+/*	background-color: rebeccapurple;*/
+	font-weight: normal;
+	display: inline-block;
+	color: #CDCDCD;
+	font-size: 16px;
+	padding-bottom: 10px;
+}
+.bigProjImage{
+/*	background-color: darkgreen;*/
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
+/*	width: 80vw;*/
+	margin-left: 10vw;
+	margin-right: 10vw;
+	margin-bottom: 10vh;
+	position:relative;
+
+}
+.bigProjImage img{
+/*	padding:5px 5px;*/
+	max-height: 80vh;
+	margin: 1.5vh;
+
+/*	border-radius: 2%;*/
+	display: inline-block;
+	vertical-align: middle;
+}
+.bigProjFlexCaption{
+/*	outline: 2px dotted pink;*/
+	color:white;
+/*	margin-left:14.5vw;*/
+	font-weight: 700;
+	font-size:2em;
+	margin-bottom:4vh;
+}
+.bigProjFlexContainer{
+/*	outline: 2px dotted purple;*/
+/*	background-color: pink;*/
+	display:flex;
+	position:relative;
+	color:white;
+	
+	font-size: 1.1em;
+}
+.bigProjFlexText{
+/*	outline: 2px dotted red;*/
+/*	background-color: darkred;*/
+	font-weight: 500;
+	width:15vw;
+	color:#CDCDCD
+/*	margin-right: 5vw;*/
+}
+.bigProjFlexText b{
+	font-weight: 500;
+	color:white;
+}
+.bigProjImageContainer{
+	overfow:hidden;
+}
+.bigProjImageContainer img{
+	object-fit: contain;
+	width:100%;
+	height:100%;
+}
+/*FOOTER------------------------------------------------*/
+.fullFooter{
+/*	outline: 2px dotted blue;*/
+	flex-direction: column;
+	align-items: center;
+	display:flex;
+	width:70vw;
+	height:24vh;
+	margin:auto;
+	margin-bottom: 3vh;
+}
+.footer{
+/*	outline: 2px dotted deeppink;*/
+	font-family: inter;
+	width: 50vw;
+	height: 20vh;
+	display:flex;
+	/*left: 0;
+	right: 0;
+	margin-inline: auto; */
+/*	position:absolute;*/
+}
+.footerGrey{
+	color: #CDCDCD;
+	font-size: 1em;
+	margin-bottom: 2vh;
+}
+.footerWhite{
+	color: #FFFFFF;
+	font-size: 1.2em;
+	margin-bottom: .6vh;
+	text-decoration: none;
+}
+.footerSiteBlock{
+/*	background-color: lightpink;*/
+	display:flex;
+	flex-direction: column;
+	margin-right: 2vw;
+	width: fit-content;
+	height: fit-content;
+}
+.footerContactBlock{
+/*	background-color: lightblue;*/
+	display:flex;
+	flex-direction: column;
+	width: fit-content;
+	height: fit-content;
+}
+.copyRight{
+/*	background-color: yellow;*/
+	color:#CDCDCD;
+	font-family: inter;
+	position:relative;
+	/*width:10vw;
+	height:10vh;*/
+}
+.workTogether{
+	color: white;
+	font-size: 1.2em;
+	font-weight: 600;
+	font-family: inter;
+/*	margin-bottom: 2vh;*/
+}
