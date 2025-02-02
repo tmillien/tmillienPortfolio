@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.7.1.js"></script>
+
+</head>
+<body>
+<!-- --------------------------SMOOTHSCROLL--------------------------------------------- -->
+<div id="navBarBg"></div>
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+// Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+                                //SCROLL CHECK FOR NAVBAR BG
+$(window).scroll(function(){
+    if ($(this).scrollTop()>400){
+        // console.log("bruh");
+        $("#navBarBg").fadeIn();
+    }
+    else {
+        $("#navBarBg").fadeOut();
+    }
+});
+
+// -----------------SCROLL BUTTON---------------------NAVBAR--------------------------------
+function scrollDownFunction(){
+console.log("scrollDownFunction");
+window.scrollTo({
+    top:$(window).height(),
+    behavior:'smooth'
+});
+}
+</script>
+    <div id="navBarBg"></div>
+    <div id="navBar">
+        <a class="leftNav" href="Home">Work</a>
+        <a class="leftNav" href="About">About</a>
+        <a class="leftNav" href="Images/TylerMillien_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a class="rightNav" href="Home">Home</a>
+    </div>
+<!-- ----------------------------------SPLASH SCREEN---------------------------------- -->
+<div class="bigDesignSplash"></div>
+<img onclick="scrollDownFunction()"class="downArrow" src="Images/whiteDownArrow.png">
+<style>
+.bigDesignSplash {
+background-image: url("Images/Infinera_Thumbnail.png");
+}
+</style>
+<!-- --------------------------TEXT--------------------------------------------- -->
+
+<div class="bigProject" ID="TEST">
+    <div class="bigProjText">
+        <div class="bigProjHeader">
+            <b>Infinera</b>
+        </div>
+        <div class="bigProjBody">
+            <p>
+                During my internship at Infinera, I got the opportunity to enhance my design skills and contribute to the team's projects. I collaborated with senior designers to create appealing informational cards for social media, and format Microsoft Powerpoint and Word documents for internal communication, using consistent and clear layout structures.<br><br>
+                I designed marketing materials, social media graphics, and graphic T-shirts using industry standard software like Adobe Illustrator and Adobe InDesign. I also participated in design critiques, where I'd recieve constructive feedback and refine my designs accordingly <br><br>
+                My time at Infinera provided a valuable opportunity to apply theoretical knowledge to real world design challenges and contribute meaningfully to the creative process. 
+            </p>
+        </div>
+        <div class="bigProjDetails">
+            <div class="detailCaption">
+                <b>Timeline</b>
+                <p>12 weeks</p> 
+            </div>
+        
+            <div class="detailCaption">
+                <b>Skills</b>
+                <p>Organization</p>
+                <p>Collaboration</p>
+                <p>Teamwork</p>
+                <p>Adobe CC</p>
+
+            </div>
+                
+            <div class="detailCaption">
+                <b>Role</b>
+                <p>Graphic Design Intern</p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div class="bigProjImage">
+        <img style="max-width: 50vw; margin-bottom: 10vh;"src="Images/big/InfineraScroll.gif" alt="sample 1">
+        <img style="max-width: 35vw;"src="Images/big/InfineraSocial1.jpg" alt="sample 1">
+        <img style="max-width: 35vw;"src="Images/big/InfineraSocial2.png" alt="sample 2">
+        <img style="max-width: 35vw;"src="Images/big/InfineraSocial3.jpg" alt="sample 3">
+        <img style="max-width: 35vw;"src="Images/big/InfineraSocial4.jpg" alt="sample 4">
+
+    </div>
+</div>
+
+<!-- ------FOOTER --------------------------------------------------------->
+<div class="fullFooter">
+    <p class="workTogether">- Let's Work Together -</p>
+    <div class="footer">
+        <div class="footerSiteBlock">
+            <p class="footerGrey">Site</p>
+            <a href="Home" class="footerWhite">Home</a>
+            <a href="About" class="footerWhite">About</a>
+            <!-- <a href="otherPage.html" class="footerWhite">Other Projects</a> -->
+        </div>
+
+        <div class="footerContactBlock">
+            <p class="footerGrey">Contact</p>
+            <a href="Images/TylerMillien_Resume.pdf" target="_blank" rel="noopener noreferrer" class="footerWhite">Resume</a>
+            <a href="https://www.linkedin.com/in/tylermillien/" target="_blank" rel="noopener noreferrer" class="footerWhite">LinkedIn</a>
+            <a class="footerWhite">tmillien188@gmail.com</a>
+            <a class="footerWhite">+1 (978) 604-3109</a>
+        </div>
+    </div>
+    <p class="copyRight">© 2025 Tyler Millien</p>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+
+</body>
+</html>

@@ -174,7 +174,7 @@ p{
 /*small DESIGN PAGE---------------------------------------------*/
 .smallProject{
 		font-family: inter;
-		padding-bottom: 20vh;
+		padding-bottom: 30vh;
 /*		display:none;*/
 }
 .smallProjText{
@@ -186,7 +186,7 @@ p{
 	padding-bottom: 8vh;
 	height:flex;
 	display:flex;
-	justify-content: flex-start;
+	justify-content: stretch;
 }
 .smallProjHeader{
 /*background-color: red;*/
@@ -244,7 +244,7 @@ display: inline-block;
 .smallProjImage img{
 	padding:5px 5px;
 	max-height: 80vh;
-	border-radius: 4%;
+/*	border-radius: 4%;*/
 	display: inline-block;
 	vertical-align: middle;
 /*	border: 1px solid #ccc;*/

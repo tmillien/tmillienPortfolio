@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+<body style="overflow:hidden">
+<!-- --------------------------SMOOTHSCROLL--------------------------------------------- -->
+
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+// Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+
+//SCROLL CHECK FOR NAVBAR BG
+$(window).scroll(function(){
+    if ($(this).scrollTop()>400){
+        // console.log("bruh");
+        $("#navBarBg").fadeIn();
+    }
+    else {
+        $("#navBarBg").fadeOut();
+    }
+});
+
+//FADE IN ON PAGE LOAD
+$(document).ready(function(){
+    $(".homepageWorkBlock").fadeIn({queue: false, duration:600});
+    $(".downArrow").fadeIn({queue: false, duration:600});
+    $(".downArrow").animate({
+        top: "69%" 
+        },{
+        duration: 900,
+        easing: "swing",
+    });
+    $("#personalCaption").fadeIn({queue: false, duration:600});
+    $("#personalCaption").animate({
+        top: "49%" 
+        },{
+        duration: 900,
+        easing: "swing",
+    });
+    console.log("ready");
+});
+
+//WORK BLOCK FADE IN
+$(document).ready(function(){
+    
+    // $(".homepageWorkBlock").animate({
+    //     top: "49%" 
+    //     },{
+    //     duration: 900,
+    //     easing: "swing",
+    // });
+    console.log("ready");
+});
+
+
+function scrollDownFunction(){
+console.log("scrollDownFunction");
+window.scrollTo({
+    top:$(window).height()*1.25,
+    behavior:'smooth'
+});
+}
+</script>
+
+<!-- --------------------------NAVBAR--------------------------------------------- -->
+    <img style="overflow: auto;position:absolute; top:75%; left:-15%; transform: rotate(90deg);width: 180vw;"src="Images/Portrait_White.gif" alt="sample 1">
+<div id="navBarBg"></div>
+<div id="navBar">
+        <a onclick="scrollDownFunction()" class="leftNav">Work</a>
+        <a class="leftNav" href="About">About</a>
+        <a class="leftNav" href="Images/TylerMillien_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a class="rightNav" href="Home">Home</a>
+</div>
+<!-- <div id="navBarLine"></div> -->
+
+<!-- Caption======================================================================= -->
+
+<img onclick="scrollDownFunction()"class="downArrow" style="display:none;position:absolute; margin-left: 15vw;" src="Images/whiteDownArrow.png">
+
+
+
+
+
+<div id="pageContent">
+    <div id="personalCaption">
+        <p style="font-weight: 700; font-size:64px; position:absolute; top:-50%;"> I'm Tyler.</p>
+        <p>A Designer that uses <br><span style="color:#312aed; font-style: italic; font-weight: 500;">web</span>, <span style="color:#a32525; font-style: italic; font-weight: 500;">print</span>, and <span style="color:#2e8d34; font-style: italic; font-weight: 500;">motion</span> <br>to connect people with<br> the world around them.</p>
+        <!-- <p>I'm also a big fan of candles. Bergamot specifically.</p> -->
+
+        <!-- <span style="color:green;">YO</span> -->
+    </div>
+
+    <!-- work block----------------------------------------------------------------- -->
+    <div id="WorkBlock"></div>
+
+    <!-- template ----------------------->
+       <!--  <div class="homepageWorkBlock">
+            <div style="content:url(Images/Infinera_Thubnail.png);" class="homepageWorkBlockImage"></div>
+            <div class="homepageWorkBlockText">
+                <div class="homepageWorkBlockTextTitle">
+                    <p>Title</p>
+                </div>
+                <div class="homepageWorkBlockTextDate">
+                    <p>Date</p>
+                </div>
+                <div class="homepageWorkBlockTextBody">
+                    <p>BodyBodyBody</p>
+                </div>
+            </div>
+        </div -->
+
+         <div class="homepageWorkBlock">
+
+            <a href="Infinera" style="content:url(Images/Infinera_Thumbnail.png);" class="homepageWorkBlockImage"></a>
+
+            <div class="homepageWorkBlockText">
+                <div class="homepageWorkBlockTextTitle">
+                    <p>Infinera Internship</p>
+                </div>
+                <div class="homepageWorkBlockTextDate">
+                    <p>Summer 2023</p>
+                </div>
+                <div class="homepageWorkBlockTextBody">
+                    <p>Graphic Design Internship expereince</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="homepageWorkBlock">
+
+            <a href="ListBuddy" style="content:url(Images/ListBuddy_Thumbnail.png);" class="homepageWorkBlockImage"></a>
+
+            <div class="homepageWorkBlockText">
+                <div class="homepageWorkBlockTextTitle">
+                    <p>ListBuddy</p>
+                </div>
+                <div class="homepageWorkBlockTextDate">
+                    <p>Winter 2024</p>
+                </div>
+                <div class="homepageWorkBlockTextBody">
+                    <p>A webapp using AI tools to help users organize their schedule</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="homepageWorkBlock">
+
+            <a href="Baba" style="content:url(Images/Baba_Thumbnail.png);" class="homepageWorkBlockImage"></a>
+
+            <div class="homepageWorkBlockText">
+                <div class="homepageWorkBlockTextTitle">
+                    <p>BABA co.</p>
+                </div>
+                <div class="homepageWorkBlockTextDate">
+                    <p>Spring 2024</p>
+                </div>
+                <div class="homepageWorkBlockTextBody">
+                    <p>An exploration on how good branding can recontextualize a design</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="homepageWorkBlock"style="padding-bottom:10vh">
+
+            <a href="USFWS" style="content:url(Images/USFWS_Thumbnail.png);" class="homepageWorkBlockImage"></a>
+
+            <div class="homepageWorkBlockText">
+                <div class="homepageWorkBlockTextTitle" style="width:20vw;">
+                    <p>US Fish and Wildlife Service</p>
+                </div>
+                <div class="homepageWorkBlockTextDate">
+                    <p>Spring 2024</p>
+                </div>
+                <div class="homepageWorkBlockTextBody">
+                    <p>A collaboration with the USFWS to increase guest retention</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+<!-- ------FOOTER --------------------------------------------------------->
+<div class="fullFooter"style="padding-bottom: 5vh;">
+    <p class="workTogether">- Let's Work Together -</p>
+    <div class="footer">
+        <div class="footerSiteBlock">
+            <p class="footerGrey">Site</p>
+            <a href="Home" class="footerWhite">Home</a>
+            <a href="About" class="footerWhite">About</a>
+            <!-- <a href="otherPage.html" class="footerWhite">Other Projects</a> -->
+        </div>
+
+        <div class="footerContactBlock">
+            <p class="footerGrey">Contact</p>
+            <a href="Images/TylerMillien_Resume.pdf" target="_blank" rel="noopener noreferrer" class="footerWhite">Resume</a>
+            <a href="https://www.linkedin.com/in/tylermillien/" target="_blank" rel="noopener noreferrer" class="footerWhite">LinkedIn</a>
+            <a class="footerWhite">tmillien188@gmail.com</a>
+            <a class="footerWhite">+1 (978) 604-3109</a>
+        </div>
+    </div>
+    <p class="copyRight">© 2025 Tyler Millien</p>
+</div>
+
+</div>
+</body>
+</html>
