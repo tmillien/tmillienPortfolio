@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.7.1.js"></script>
+
+</head>
+<body>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+// Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+
+                                //SCROLL CHECK FOR NAVBAR BG
+$(window).scroll(function(){
+    if ($(this).scrollTop()>300){
+        console.log("bruh");
+        $("#navBarBg").fadeIn();
+    }
+    else {
+        $("#navBarBg").fadeOut();
+    }
+});
+</script>
+<div id="navBarBg"></div>
+<div id="navBar">
+        <a onclick="scrollDownFunction()" class="leftNav">Work</a>
+        <a class="leftNav" href="About">About</a>       
+        <a class="leftNav" href="More">More Projects</a>
+
+        <a class="rightNav" href="Home">Home</a>
+        <a class="rightNav" href="Images/TylerMillien_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+</div>
+    <div class="navBlock"></div>
+
+<!-- PROJECT NUMBER ONE ------------------------------------------------------------------ -->
+<div class="smallProject">
+    <div class="smallProjText">
+        <div class="smallProjHeader">
+            <b>Fashion Magazine</b>
+        </div>
+        <div class="smallProjBody">
+            <p>I drew inspiration from 90s Black culture, exploring the era’s influential style, music, and trends to create this fictional magazine. This project allowed me to combine my passion for 80s and 90s fashion with my design work, strengthening my skills in historical research, mood board creation, and editorial layout. I examined how hip-hop, R&B, and Black cinema shaped fashion movements, influencing everything from baggy denim to luxury brand collaborations. Through constructing the zine, I refined my typography choices, print design techniques, and the ability to visually translate cultural movements into a cohesive aesthetic.</p>
+        </div>
+        <div class="smallProjDetails">
+            <div class="detailCaption">
+                <b>Duration</b>
+                <p>4 weeks</p> 
+            </div>
+        
+            <div class="detailCaption">
+                <b>Skills</b>
+                <p>Research</p>
+                <p>Layout</p>
+                <p>Typography</p>
+            </div>
+                
+            <div class="detailCaption">
+                <b>Role</b>
+                <p>Graphic Designer</p>
+            </div>
+        </div>
+    </div>
+    <div style="margin-bottom: 10vh;justify-content: center;"class="smallProjImage">
+        <img style="margin:1vh;max-height: 90vh;"src="Images/small0/90sFashionZine1.png" alt="sample 1" id="smallProjImage">
+        <img style="margin:1vh;max-height: 90vh;"src="Images/small0/90sFashionZine2.png" alt="sample 1" id="smallProjImage">
+        <img style="margin:1vh;max-height: 90vh;"src="Images/small0/90sFashionZine3.png" alt="sample 1" id="smallProjImage">
+        <img style="margin:1vh;max-height: 90vh;"src="Images/small0/90sFashionZine4.png" alt="sample 1" id="smallProjImage">
+    </div>
+    <img style="max-width: 60vw;margin-left: 20%;"src="Images/small0/FashionMockup.png" alt="sample 1" id="smallProjImage">
+    <div id="Vote"style="width:1vw;height:1vw;"></div>
+</div>
+<!-- PROJECT NUMBER ONE ------------------------------------------------------------------ -->
+<div class="smallProject">
+    <div class="smallProjText">
+        <div class="smallProjHeader">
+            <b>VOTE poster campaign</b>
+        </div>
+        <div style="width:28vw"class="smallProjBody">
+            <p>
+                This project focuses on creating a dynamic and impactful graphic design campaign to encourage voter participation. The campaign will include a series of visually compelling social media posts and posters designed to capture attention, inform, and inspire action. Vibrant, attention-grabbing visuals will pair with concise, motivational messaging to emphasize the importance of voting and provide practical information about how and where to cast a ballot.
+            </p>
+        </div>
+        <div class="smallProjDetails">
+            <div class="detailCaption">
+                <b>Timeline</b>
+                <p>5 weeks</p> 
+            </div>
+        
+            <div class="detailCaption">
+                <b>Skills</b>
+                <p>Typography</p>
+                <p>User Research</p>
+            </div>
+                
+            <div class="detailCaption">
+                <b>Role</b>
+                <p>Graphic Designer</p>
+            </div>
+        </div>
+    </div>
+    <div class="smallProjImage">
+        <img style="max-height: 45vh; padding-bottom: 1vh;" src="Images/small/SocialMediaVote-01.jpg" alt="sample 1" id="smallProjImage">
+        <img style="max-height: 45vh;" src="Images/small/SocialMediaVote-02.jpg" alt="sample 2" id="smallProjImage">
+        <img style="max-height: 45vh;" src="Images/small/SocialMediaVote-03.jpg" alt="sample 3" id="smallProjImage">
+
+
+        <img src="Images/small/VOTEmockup.png" alt="sample 3" id="smallProjImage">
+        <img style="max-height: 60vh; padding-left: 1vh;"src="Images/small/STANDmockup.png" alt="sample 3" id="smallProjImage">
+    </div>
+    <div id="Typography"style="width:1vw;height:1vw;"></div>
+</div>
+<!-- PROJECT NUMBER TWO ----------------------------------------------------------------- -->
+<div class="smallProject">
+    <div class="smallProjText">
+        <div class="smallProjHeader">
+            <b>Typography: In theory and practice</b>
+        </div>
+        <div style="width:29vw" class="smallProjBody">
+            <p>The Typography Essentials pamphlet is designed to be an engaging and visually compelling guide that introduces readers to the fundamentals of typography. It will serve as a resource for designers, students, and anyone interested in understanding the art and science of type. The content will cover a range of topics, including the history of typography, the anatomy of type (with terms like serifs, ascenders, and kerning), font classifications such as serif and sans-serif, and the psychology behind font choices and their impact on perception and brand identity. Additionally, the pamphlet will provide practical tips on readability, hierarchy, and effective font pairing.
+
+            </p>
+        </div>
+        <div class="smallProjDetails">
+            <div class="detailCaption">
+                <b>Timeline</b>
+                <p>3 weeks</p> 
+            </div>
+        
+            <div class="detailCaption">
+                <b>Skills</b>
+                <p>Typography</p>
+                <p>Visual Design</p>
+            </div>
+                
+            <div class="detailCaption">
+                <b>Role</b>
+                <p>Graphic Designer</p>
+            </div>
+        </div>
+    </div>
+    <div class="smallProjImage">
+        <img style="max-height: 50vh;" src="Images/small/type_cover.png" alt="sample 1" id="smallProjImage">
+        <img style="max-height: 50vh;"src="Images/small/type_mock.png" alt="sample 1" id="smallProjImage">
+        <img style="max-height: 100vh;"src="Images/small/type_spread.png" alt="sample 1" id="smallProjImage">
+    </div>
+    <div id="IntoWoods"style="width:1vw;height:1vw;"></div>
+</div>
+
+
+<div class="smallProject">
+    <div class="smallProjText">
+        <div  id="yo"class="smallProjHeader">
+            <b>Into the Woods Poster</b>
+        </div>
+        <div class="smallProjBody">
+            <p>I won first place in a poster design contest for Into the Woods, a theatrical production at UMass Amherst. My design stood out for its strong visuals and alignment with the production’s themes, blending elements from the story with a comic-book aesthetic. Throughout the process, I collaborated with the UMass theatre department to ensure the poster effectively captured the show’s tone and met their promotional needs. This experience strengthened my skills in visual storytelling and working with clients to develop compelling artwork.</p>
+        </div>
+        <div class="smallProjDetails">
+            <div class="detailCaption">
+                <b>Duration</b>
+                <p>3 weeks</p> 
+            </div>
+        
+            <div class="detailCaption">
+                <b>Skills</b>
+                <p>Typography</p>
+            </div>
+                
+            <div class="detailCaption">
+                <b>Role</b>
+                <p>Graphic Designer</p>
+            </div>
+        </div>
+    </div>
+    <div class="smallProjImage">
+        <img style="max-height: 100vh;"src="Images/small2/wood1.png" alt="sample 1" id="smallProjImage">
+        <img style="max-height: 70vh;"src="Images/small2/wood2.png" alt="sample 1" id="smallProjImage">
+    </div>
+    <div id="Ctrl"style="width:1vw;height:1vw;"></div>
+</div>
+
+<!-- PROJECT NUMBER THREE ---------------------------------------------------------------- -->
+<div class="smallProject">
+    <div class="smallProjText">
+        <div class="smallProjHeader">
+            <b>Ctrl+Art+Repeat</b>
+        </div>
+        <div class="smallProjBody">
+            <p>Ctrl+Art+Repeat is a collaborative art project where myself and others worked to fill a shared canvas, resulting in a collection of unique yet interconnected pieces. Through this project, I refined my layout and composition skills, learned to balance individual expression with collective vision, and deepened my understanding of how design can unify diverse artistic voices into a single, compelling narrative. I also designed the project’s cover, a sticky-note collage that visually captured the essence of our collaboration by layering elements from our artwork into a cohesive composition. </p>
+        </div>
+        <div class="smallProjDetails">
+            <div class="detailCaption">
+                <b>Duration</b>
+                <p>4 weeks</p> 
+            </div>
+        
+            <div class="detailCaption">
+                <b>Skills</b>
+                <p>Teamwork</p>
+                <p>Layout</p>
+                <p>Composition</p>
+            </div>
+                
+            <div class="detailCaption">
+                <b>Role</b>
+                <p>Graphic Designer</p>
+                <p>Illustrator</p>
+            </div>
+        </div>
+    </div>
+    <div class="smallProjImage">
+        <img src="Images/small2/umass-book-cover.jpg" alt="sample 1" id="smallProjImage">
+    </div>
+    <div id="Trans"style="width:1vw;height:1vw;"></div>
+</div>
+
+
+<div class="smallProject">
+    <div class="smallProjText">
+        <div class="smallProjHeader">
+            <b>Transcendent Narratives</b>
+        </div>
+        <div class="smallProjBody">
+            <p>For an artist exhibit at UMass Amherst, I designed the cover for the University’s exhibit. This project taught me how to navigate design regulations, maintain visual consistency, and create compelling collateral within institutional constraints.</p>
+        </div>
+        <div class="smallProjDetails">
+            <div class="detailCaption">
+                <b>Duration</b>
+                <p>1 weeks</p> 
+            </div>
+        
+            <div class="detailCaption">
+                <b>Skills</b>
+                <p>Typography</p>
+            </div>
+                
+            <div class="detailCaption">
+                <b>Role</b>
+                <p>Graphic Designer</p>
+            </div>
+        </div>
+    </div>
+    <div class="smallProjImage">
+        <img style="max-height: 90vh;"src="Images/small2/Card_Back_v2.jpg" alt="sample 1" id="smallProjImage">
+        <img style="max-height: 90vh;"src="Images/small2/Card_Front_v2.jpg" alt="sample 1" id="smallProjImage">
+    </div>
+</div>
+
+<!-- ------FOOTER --------------------------------------------------------->
+<div class="fullFooter" >
+    <p class="workTogether">- Let's Work Together -</p>
+    <div class="footer">
+        <div class="footerSiteBlock">
+            <p class="footerGrey">Site</p>
+            <a href="Home" class="footerWhite">Home</a>
+            <a href="About" class="footerWhite">About</a>
+            <a href="More" class="footerWhite">More Projects</a>
+            <!-- <a href="otherPage.html" class="footerWhite">Other Projects</a> -->
+        </div>
+
+        <div class="footerContactBlock">
+            <p class="footerGrey">Contact</p>
+            <a href="Images/TylerMillien_Resume.pdf" target="_blank" rel="noopener noreferrer" class="footerWhite">Resume</a>
+            <a href="https://www.linkedin.com/in/tylermillien/" target="_blank" rel="noopener noreferrer" class="footerWhite">LinkedIn</a>
+            <a class="footerWhite">tmillien188@gmail.com</a>
+            <a class="footerWhite">+1 (978) 604-3109</a>
+        </div>
+    </div>
+    <p class="copyRight">© 2025 Tyler Millien</p>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+});
+</script>
+</body>
+</html>
